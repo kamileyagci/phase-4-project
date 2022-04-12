@@ -1,12 +1,10 @@
-
+#Ignore the following files
 .ipynb_checkpoints
 .DS_Store
 __pycache__
 *.db
 *.pytest_cache
-
-# ignore ALL .jpeg files
-*.jpeg
+# *.jpeg
 
 # ignore ALL files in ANY directory named
 # chest_xray/
