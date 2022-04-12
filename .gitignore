@@ -4,11 +4,8 @@ __pycache__
 *.db
 *.pytest_cache
 
-
 # ignore ALL .jpeg files
 *.jpeg
-
-
 
 # ignore ALL files in ANY directory named
 # chest_xray/
