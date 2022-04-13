@@ -20,6 +20,9 @@ staff is limited. The automated identification system will provide early diagnos
 patients, so the treatment can start as soon as possible. Moreover it will decrease the human errors
 in pneumonia diagnosis.
 
+## Outline
+
+
 ## Data
 
 The dataset 'Chest X-Ray Images (Pneumonia)' is downloaded from Kaggle. 
@@ -47,8 +50,26 @@ The original dataset downloaded from Kaggle distributed the data in three direct
 In this study, I applied Image Classification with Deep Learning using the Convolutional Neural Networks (CNN) on chest x-ray images. Since the data labels has two classes, NORMAL and PNEUMONIA, this is a binary image classification.
 
 
-## Results
+## Analysis and Results
 
+My main challenge in this study is the computing power, since I am using an old Macbook Pro. When training with various models, I shouldn't overload my computer and need to keep the training time short. For this purpose, I train the model with the following settings: 
+
+* Use a subset of data during training: 960 images (23%) for training and 320 images (36%) for validation. I controlled the number of images by 'steps_per_epoch' parameter while training. 
+
+* Use small target_size when loading the images: (64x64)
+
+* Run the training with small number of epochs: 30
+
+With these parameter selections, model training takes about 10 minutes.
+
+The whole training and testing data is used for model evaluations.
+
+After final model is determined, I run the final model on whole dataset.
+
+
+### Baseline Model
+
+The feature of my baseline models
 
 ## Conclusions
 
