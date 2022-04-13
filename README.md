@@ -7,7 +7,7 @@
 ## Overview
 
 In this study, I analyze the Chest X-ray Images of pediatric patients in order to identify whether or
-not they have pneumonia. I will apply Image Classification wih Deep Learning using the
+not they have pneumonia. I will apply Image Classification with Deep Learning using the
 Convolutional Neural Networks (CNN).
 
 ## Business Problem
@@ -24,7 +24,7 @@ in pneumonia diagnosis.
 
 The dataset 'Chest X-Ray Images (Pneumonia)' is downloaded from Kaggle. 
 
-The data contains the chest x-ray images of pedicatric patients ages from one to five years old, collected at Guangzhou Women and Children’s Medical Center.
+The data contains the chest x-ray images of pedicatric patients from one to five years old, collected at Guangzhou Women and Children’s Medical Center.
 
 The diagnosis on chest x-ray images have three types: Normal, Bacterial pneumonia and Viral pneumonia. The image below show a sample for each type.
 
@@ -32,7 +32,7 @@ The diagnosis on chest x-ray images have three types: Normal, Bacterial pneumoni
 
 The dataset contains 5856 chest x-ray image files. They are labeled in two categories: NORMAL and PNEUMONIA. The number of NORMAL image samples is 1583, and the number of PNEUMONIA image samples is 4273. Bacterial pneumonia and Viral pneumonia samples are combined under label PNEUMONIA.
 
-The original dataset downloaded from Kaggle distributed the data in three directories: Train, Validation and Test. However, the number of files in validation directory was small and insufficient. Thereofore, I redistributed the data with ~70% train, ~15% validation and 15% test. 
+The original dataset downloaded from Kaggle distributed the data in three directories: Train, Validation and Test. However, the number of files in validation directory was small and insufficient. Thereofore, I redistributed the data with ~70% train, ~15% validation and 15% test. The table shows the number of images files in each directory per label.
 
 | | Normal | PNEUMONIA | ALL |
 | :- | -: | :-: | :-: |
@@ -42,19 +42,9 @@ The original dataset downloaded from Kaggle distributed the data in three direct
 | All | 1583 | 4273 | 5856
 
 
-
-
-Figure S6. Illustrative Examples of Chest X-Rays in Patients with Pneumonia, Related to Figure 6
-The normal chest X-ray (left panel) depicts clear lungs without any areas of abnormal opacification in the image. Bacterial pneumonia (middle) typically exhibits a focal lobar consolidation, in this case in the right upper lobe (white arrows), whereas viral pneumonia (right) manifests with a more diffuse ‘‘interstitial’’ pattern in both lungs.
-
-The dataset is organized into 3 folders (train, test, val) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal).
-
-Chest X-ray images (anterior-posterior) were selected from retrospective cohorts of pediatric patients of one to five years old from Guangzhou Women and Children’s Medical Center, Guangzhou. All chest X-ray imaging was performed as part of patients’ routine clinical care.
-
-For the analysis of chest x-ray images, all chest radiographs were initially screened for quality control by removing all low quality or unreadable scans. The diagnoses for the images were then graded by two expert physicians before being cleared for training the AI system. In order to account for any grading errors, the evaluation set was also checked by a third expert.
-
-
 ## Methods
+
+In this study, I applied Image Classification with Deep Learning using the Convolutional Neural Networks (CNN) on chest x-ray images. Since the data labels has two classes, NORMAL and PNEUMONIA, this is a binary image classification.
 
 
 ## Results
