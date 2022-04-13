@@ -238,7 +238,7 @@ Comparison of 'New Model (8CNN+3Dense) with optimizer='Adam'' and 'Baseline with
 * The testing accuracy is same, but testing loss is a bit larger.
 * I will not use the new model, and keep using baseline model with optimizer='adam'.
 
-## Train on whole dataset
+### Train on whole dataset , Baseline Model with optimizer='Adam'
 
 I now run baseline model with optimizer='adam' on whole training and validation data.
 
@@ -260,6 +260,7 @@ Comparison of 'Whole Data on Baseline 'Adam' and 'Subset Data on Baseline 'Adam'
 * However, testing loss significantly increasing on whole data (0.1214 -> 0.3068).
 * Large dataset increased overfitting. The training accuracy is 1.00. The overfitting is especially observed in loss curve.
 * With the larger sample size, the fluctuations in the accuracy and loss curves decrease, especially on the validation data.
+* I choose to train my model on subset of data, not on whole data. 
 
 ** With L2 Regularization**
 
@@ -302,6 +303,7 @@ Train on
 
 
 ## Conclusions
+
 
 
 
