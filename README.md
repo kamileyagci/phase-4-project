@@ -138,7 +138,7 @@ I have added Dropout Layers to the Baseline Model.
 
 Comparison of 'Baseline +  Dropout Layers Model' and 'Baseline Model'.
 
-<img src="/images/compare_Regularization+Baseline_Baseline.png" width=1200/>
+<img src="/images/compare_DropoutLayers+Baseline_Baseline.png" width=1200/>
 
 **Comments:**
 
