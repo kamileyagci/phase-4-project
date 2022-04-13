@@ -84,7 +84,7 @@ Compile with:
 
 The evaluation results:
 
-| : Baseline Model Evaluation :|
+| : Baseline Model Evaluation ||
 | | Accuracy | Loss |
 | :- | -: | :-: |
 | Train | 1107 | 2991 |
