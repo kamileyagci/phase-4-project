@@ -113,7 +113,7 @@ Therefore, I have added L2 Regularization to my baseline model.
 
 Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
 
-<img src="/compare_Regularization+Baseline_Baseline.png" width=1200/>
+<img src="/images/compare_Regularization+Baseline_Baseline.png" width=1200/>
 
 **Comments:**
 
