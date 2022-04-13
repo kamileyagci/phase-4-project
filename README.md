@@ -294,6 +294,10 @@ Train on
 * epochs = 30
 * batch_size = 20
 
+**Accuracy and Loss Graphs for Final Model:**
+
+<img src="/images/model_9_acc_loss_plot.png" width=1200/>
+
 **Evaluation Results for Final Model:**
 
 | | Accuracy | Loss |
@@ -302,9 +306,19 @@ Train on
 | Test | 0.9545 | 0.1214 |
 
 
+
 ## Conclusions
 
-
+* The final model has very good performance.
+* The model classifes NORMAL and PNEUMONIA chest-ray images with 95.45% accuracy.
+* The overfitting on the model is small, but still exists. The L2 Regularization didn't reduce the overfitting.
+* The final model uses subset of data for training.
+* The model performance on subset data is comparable to whole data.
+    * The accuracy is slightly better on whole data
+    * The loss is larger on whole data
+    * The overfitting is larger on whole data
+* Due to computing power limitations, I couldn't do tuning on whole data.
+* Since baseline model (with optimizer 'sgd' or 'adam') has initially good performance on subset data, there wasn't much room for improvement. However, the performance might be different on whole data. Augmentation and new models with added layers and larger units/nodes could function better on whole data.
 
 
 ## Next Steps
