@@ -82,11 +82,11 @@ Compile with:
 * optimizer= 'sgd'
 * metrics='acc'
 
-**Accuracy and Loss Graphs for Training and Validation:**
+Accuracy and Loss Graphs for Training and Validation:
 
 <img src="/images/model_4_acc_loss_plot.png" width=1200/>
 
-**Evaluation results:**
+**Evaluation Results:**
 
 | | Accuracy | Loss |
 | :- | -: | :-: |
@@ -96,7 +96,31 @@ Compile with:
 **Comments:**
 
 * Overall performance is good for baseline model.
-* There is not much overfitting.
+* There is a slight overfitting.
+
+### Baseline + Regularization Model
+
+Even though, the overfiting is small when running on subset data, it can increase when running on whole data.
+
+Therefore, I have added L2 Regularization to my baseline model.
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9212 | 0.9938 |
+| Test | 0.8976 | 1.0141 |
+
+Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
+
+<img src="/compare_Regularization+Baseline_Baseline.png" width=1200/>
+
+**Comments:**
+
+* Regularization did not improve the overfitting.
+* The model performance with regularization is worse than the baseline model.
+* The accuracy in testing decreased significantly.
+* The loss values incresaed as a result of the regularization penalty on loss function.
 
 
 ## Conclusions
