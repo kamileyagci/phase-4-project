@@ -89,8 +89,8 @@ The evaluation results:
 
 | | Accuracy | Loss |
 | :- | -: | :-: |
-| Train | 1107 | 2991 
-| Test | 238 | 641 
+| Train | 1107 | 2991 |
+| Test | 238 | 641 |
 
 
 
