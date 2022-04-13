@@ -58,6 +58,8 @@ My main challenge in this study is the computing power, since I am using an old 
 
 * Use small target_size when loading the images: (64x64)
 
+* Use relatively small batch_size due to small dataset when loading the images: 20  (batch_size=20 yields better performance than batch_size=32 with subset data, according to my analysis)
+
 * Run the training with small number of epochs: 30
 
 With these parameter selections, model training takes about 10 minutes.
@@ -69,7 +71,26 @@ After final model is determined, I run the final model on whole dataset.
 
 ### Baseline Model
 
-The feature of my baseline models
+The features of my baseline model:
+* 6 CNN layers
+* 2 Dense layers
+* Activation function (except out put layer): 'relu'
+* Output layer activation faunction: 'sigmoid'
+
+Compile with:
+* loss='binary_crossentropy',
+* optimizer= 'sgd'
+* metrics='acc'
+
+The evaluation results:
+
+| Baseline Model Evaluation |
+| | Accuracy | Loss |
+| :- | -: | :-: | :-: |
+| Train | 1107 | 2991 |
+| Test | 238 | 641 |
+
+
 
 ## Conclusions
 
