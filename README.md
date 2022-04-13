@@ -87,10 +87,10 @@ The evaluation results:
 | Baseline Model Evaluation |
 
 
-| | Accuracy | Loss |
+| | Normal | PNEUMONIA | ALL |
 | :- | -: | :-: | :-: |
-| Train | 1107 | 2991
-| Test | 238 | 641 
+| Train | 1107 | 2991 | 4098 
+| Test | 238 | 641 | 879
 
 
 
