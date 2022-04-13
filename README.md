@@ -28,7 +28,7 @@ The data contains the chest x-ray images of pedicatric patients ages from one to
 
 The diagnosis on chest x-ray images are divided in three categories: Normal, Bacterial pneumonia and Viral pneumonia. The image below show a sample for each category.
 
-<img src="/images/chestxray_images_samples.png" width=600/>
+<img src="/images/chestxray_images_samples.png" width=800/>
 
 
 
