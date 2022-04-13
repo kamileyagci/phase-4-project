@@ -26,9 +26,21 @@ The dataset 'Chest X-Ray Images (Pneumonia)' is downloaded from Kaggle.
 
 The data contains the chest x-ray images of pedicatric patients ages from one to five years old, collected at Guangzhou Women and Children’s Medical Center.
 
-The diagnosis on chest x-ray images are divided in three categories: Normal, Bacterial pneumonia and Viral pneumonia. The image below show a sample for each category.
+The diagnosis on chest x-ray images have three types: Normal, Bacterial pneumonia and Viral pneumonia. The image below show a sample for each type.
 
 <img src="/images/chestxray_images_samples.png" width=800/>
+
+The dataset contains 5856 chest x-ray image files. They are labeled in two categories: NORMAL and PNEUMONIA. The number of NORMAL image samples is 1583, and the number of PNEUMONIA image samples is 4273. Bacterial pneumonia and Viral pneumonia samples are combined under label PNEUMONIA.
+
+The original dataset downloaded from Kaggle distributed the data in three directories: Train, Validation and Test. However, the number of files in validation directory was small and insufficient. Thereofore, I redistributed the data with ~70% train, ~15% validation and 15% test. 
+
+| | Normal | PNEUMONIA | ALL |
+| :- | -: | :-: | :-: |
+| Train | 1107 | 2991 | 4098 
+| Validation| 238 | 641 | 879 
+| Test | 238 | 641 | 879
+| All | 1583 | 4273 | 5856
+
 
 
 
