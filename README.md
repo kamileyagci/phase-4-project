@@ -286,7 +286,7 @@ The features of final model:
 
 Compile with:
 * loss='binary_crossentropy',
-* optimizer= 'sgd'
+* optimizer= 'adam'
 * metrics='acc'
 
 Train on
