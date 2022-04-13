@@ -86,6 +86,10 @@ Accuracy and Loss Graphs for Training and Validation:
 
 <img src="/images/model_4_acc_loss_plot.png" width=800/>
 
+<img src="/images/model_4_acc_loss_plot.png" width=1000/>
+
+![model4](/images/model_4_acc_loss_plot.png.png)
+
 Evaluation results:
 
 | | Accuracy | Loss |
