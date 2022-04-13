@@ -98,6 +98,7 @@ Accuracy and Loss Graphs for Training and Validation:
 * Overall performance is good for baseline model.
 * There is a slight overfitting.
 
+
 ### Baseline + Regularization Model
 
 Even though, the overfiting is small when running on subset data, it can increase when running on whole data.
@@ -121,6 +122,88 @@ Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
 * The model performance with regularization is worse than the baseline model.
 * The accuracy in testing decreased significantly.
 * The loss values incresaed as a result of the regularization penalty on loss function.
+* I will not use Regularization in my model.
+
+
+### Baseline + Dropout Layers Model
+
+I have added Dropout Layers to the Baseline Model.
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.8694 | 0.3846 |
+| Test | 0.8464 | 0.4017 |
+
+Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
+
+<img src="/images/compare_Regularization+Baseline_Baseline.png" width=1200/>
+
+**Comments:**
+
+* The result with Droput is a worse than the baseline model. 
+* The accuracy in training and testing decreased significantly.
+* Interestingly, the validation performance looks better than training.
+* I will not use Dropout Layers in my model.
+
+
+### Baseline + Augmentation
+
+I tried different augmentation parameter for training model one by one with several values:
+
+* horizontal_flip
+* brightness_range
+* width_shift_range
+* height_shift_range
+* rotation_range
+* zoom_range
+* shear_range
+
+Unfortunately, the augmentation is not helping. Most of the parameters caused a lower
+performance. Only shear_range=0.3 keeps the performance of the baseline model.
+
+I ran the training with with shear_range=0.3 and comapred it to the baseline mode.
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9356 | 0.9356 |
+| Test | 0.9295 | 0.1824 |
+
+Comparison of 'Baseline + Augmentation(shear_range=0.3)' and 'Baseline Model'.
+
+<img src="/images/compare_Aug-shear_range=0.3+Baseline_Baseline.png" width=1200/>
+
+**Comments:**
+
+* Augmentation with shear_range=0.3 didn't not improve the model performance. It is almost
+same as the baseline model results.
+* I will not use augmentation in my model.
+
+
+### Baseline Model with Optimizer = 'Adam'
+
+I tried a different optimizer = 'Adam' when compiling the model.
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9736 | 0.0774 |
+| Test | 0.9545 | 0.1214 |
+
+Comparison of 'Baseline + Augmentation(shear_range=0.3)' and 'Baseline Model'.
+
+<img src="/images/compare_Optimizer-Adam+Baseline_Baseline.png" width=1200/>
+
+**Comments:**
+
+* The optimizer 'Adam' significantly improved the model performance compared to optimizer 'sgd'.
+* The accuracy increased and loss decreased in training, validation and testing samples.
+* There is slight overfitting.
+* I will use optimizer 'adam' for my model.
 
 
 ## Conclusions
