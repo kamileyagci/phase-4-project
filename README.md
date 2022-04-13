@@ -136,7 +136,7 @@ I have added Dropout Layers to the Baseline Model.
 | Train | 0.8694 | 0.3846 |
 | Test | 0.8464 | 0.4017 |
 
-Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
+Comparison of 'Baseline +  Dropout Layers Model' and 'Baseline Model'.
 
 <img src="/images/compare_Regularization+Baseline_Baseline.png" width=1200/>
 
@@ -194,7 +194,7 @@ I tried a different optimizer = 'Adam' when compiling the model.
 | Train | 0.9736 | 0.0774 |
 | Test | 0.9545 | 0.1214 |
 
-Comparison of 'Baseline + Augmentation(shear_range=0.3)' and 'Baseline Model'.
+Comparison of 'Baseline Model with Optimizer='Adam'' and 'Baseline Model'.
 
 <img src="/images/compare_Optimizer-Adam+Baseline_Baseline.png" width=1200/>
 
@@ -202,11 +202,107 @@ Comparison of 'Baseline + Augmentation(shear_range=0.3)' and 'Baseline Model'.
 
 * The optimizer 'Adam' significantly improved the model performance compared to optimizer 'sgd'.
 * The accuracy increased and loss decreased in training, validation and testing samples.
-* There is slight overfitting.
+* There is slight overfitting, but it increases as the epoch number increases.
 * I will use optimizer 'adam' for my model.
+
+Note: I run this model with L2 regularization, but didn't improve the performance.
+
+
+### New Model with more layers and optimizer='Adam'
+
+The features of the new model:
+* 8 CNN layers
+* 3 Dense layers
+* Activation function (except out put layer): 'relu'
+* Output layer activation faunction: 'sigmoid'
+
+Compile with:
+* loss='binary_crossentropy',
+* optimizer= 'adam'
+* metrics='acc'
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9678 | 0.0806 |
+| Test | 0.9522 | 0.1536 |
+
+Comparison of 'New Model (8CNN+3Dense) with optimizer='Adam'' and 'Baseline with optimizer='Adam'.
+
+<img src="/images/compare_8CNN_3Dense_Layers+Adam_Baseline+Adam.png" width=1200/>
+
+**Comments:**
+
+* The new model with 8 CNN and 3 Dense layers didn't perform better than our Baseline Model.
+* The testing accuracy is same, but testing loss is a bit larger.
+* I will not use the new model, and keep using baseline model with optimizer='adam'.
+
+## Train on whole dataset
+
+I now run baseline model with optimizer='adam' on whole training and validation data.
+
+**Evaluation Results:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 1.000 | 0.0006 |
+| Test | 0.9590 | 0.3068 |
+
+Comparison of 'Whole Data on Baseline 'Adam' and 'Subset Data on Baseline 'Adam''.
+
+<img src="/images/compare_WholeData_Baseline+Adam_SubsetData_Baseline+Adam.png" width=1200/>
+
+**Comments:**
+
+* Running on whole data did improve the model performance very little.
+* The testing accuracy (0.9590) is very slightly higher than the accuracy from the subset data (0.9545).
+* However, testing loss significantly increasing on whole data (0.1214 -> 0.3068).
+* Large dataset increased overfitting. The training accuracy is 1.00. The overfitting is especially observed in loss curve.
+* With the larger sample size, the fluctuations in the accuracy and loss curves decrease, especially on the validation data.
+
+** With L2 Regularization**
+
+I trained this model with reqularization on whole data. Even though the overfitting decreased, the accuracy didn't improved.
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9432 | 0.1811 |
+| Test | 0.9352 | 0.2043 |
+
+
+### Final Model
+
+The model with best performance is "baseline model with optimizer='adam'". It is my final model.
+
+The structure of the model, and compile and fit information are shown below.
+
+The features of final model:
+* 6 CNN layers
+* 2 Dense layers
+* Activation function (except out put layer): 'relu'
+* Output layer activation faunction: 'sigmoid'
+
+Compile with:
+* loss='binary_crossentropy',
+* optimizer= 'sgd'
+* metrics='acc'
+
+Train on
+* subset of data (~20% of whole data)
+* epochs = 30
+* batch_size = 20
+
+**Evaluation Results for Final Model:**
+
+| | Accuracy | Loss |
+| :- | -: | :-: |
+| Train | 0.9736 | 0.0774 |
+| Test | 0.9545 | 0.1214 |
 
 
 ## Conclusions
+
 
 
 ## Next Steps
