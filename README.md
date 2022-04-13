@@ -82,14 +82,21 @@ Compile with:
 * optimizer= 'sgd'
 * metrics='acc'
 
-The evaluation results:
+Accuracy and Loss Graphs for Training and Validation:
 
-| : Baseline Model Evaluation :||
+<img src="/images/model_4_acc_loss_plot.png" width=800/>
+
+Evaluation results:
+
 | | Accuracy | Loss |
 | :- | -: | :-: |
-| Train | 1107 | 2991 |
-| Test | 238 | 641 |
+| Train | 0.9370 | 0.1696 |
+| Test | 0.9295 | 0.1855 |
 
+**Comments**
+
+* Overall performance is good for baseline model.
+* There is not much overfitting.
 
 
 ## Conclusions
