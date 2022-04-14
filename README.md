@@ -14,7 +14,7 @@ Convolutional Neural Networks (CNN).
 
 The Baylor Medical Center hired me to improve the accuracy in pneumonia diagnosis on pediatric
 patients. The study will use the chest X-ray Images of pediatric patients and do the image
-classification identifying whether the X-ray shows pneuomia or not. The outcome of this study will
+classification identifying whether the X-ray shows pneumonia or not. The outcome of this study will
 not only be used at Baylor Centers, but also in partner medical clinics in Africa, where the medical
 staff is limited. The automated identification system will provide early diagnosis of pediatric
 patients, so the treatment can start as soon as possible. Moreover it will decrease the human errors
