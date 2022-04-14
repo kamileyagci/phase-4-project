@@ -1,9 +1,11 @@
 #Ignore the following files
+
 .ipynb_checkpoints
 .DS_Store
 __pycache__
 *.db
 *.pytest_cache
+
 # *.log
 # *.jpeg
 
