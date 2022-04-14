@@ -22,6 +22,21 @@ in pneumonia diagnosis.
 
 ## Outline
 
+* Overview
+* Business Problem
+* Data
+* Methods
+* Analysis and Results
+    * Baseline Model
+    * Baseline + Regularization Model
+    * Baseline + Dropout Layers Model
+    * Baseline Model + Augmentation
+    * New Model with more Layers and optimizer='Adam'
+    * Train on whole dataset, Baseline Model with optimizer='Adam'
+    * Final Model
+* Conclusion
+* Next Steps
+
 
 ## Data
 
@@ -118,7 +133,7 @@ Comparison of 'Baseline + Regularization Model' and 'Baseline Model'.
 
 **Comments:**
 
-* Regularization did not improve the overfitting.
+* Regularization did improve the slight overfitting.
 * The model performance with regularization is worse than the baseline model.
 * The accuracy in testing decreased significantly.
 * The loss values incresaed as a result of the regularization penalty on loss function.
@@ -148,7 +163,7 @@ Comparison of 'Baseline +  Dropout Layers Model' and 'Baseline Model'.
 * I will not use Dropout Layers in my model.
 
 
-### Baseline + Augmentation
+### Baseline Model + Augmentation
 
 I tried different augmentation parameter for training model one by one with several values:
 
@@ -208,7 +223,7 @@ Comparison of 'Baseline Model with Optimizer='Adam'' and 'Baseline Model'.
 Note: I run this model with L2 regularization, but didn't improve the performance.
 
 
-### New Model with more layers and optimizer='Adam'
+### New Model with more Layers and optimizer='Adam'
 
 The features of the new model:
 * 8 CNN layers
@@ -307,12 +322,12 @@ Train on
 
 
 
-## Conclusions
+## Conclusion
 
 * The final model has very good performance.
 * The model classifes NORMAL and PNEUMONIA chest-ray images with 95.45% accuracy.
 * The overfitting on the model is small, but still exists. The L2 Regularization didn't reduce the overfitting.
-* The final model uses subset of data for training.
+* The final model uses subset of data for training. 
 * The model performance on subset data is comparable to whole data.
     * The accuracy is slightly better on whole data
     * The loss is larger on whole data
