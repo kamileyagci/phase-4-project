@@ -4,11 +4,13 @@
 
 **Blog URL: https://kamileyagci.github.io/**
 
+
 ## Overview
 
 In this study, I analyze the Chest X-ray Images of pediatric patients in order to identify whether or
 not they have pneumonia. I will apply Image Classification with Deep Learning using the
 Convolutional Neural Networks (CNN).
+
 
 ## Business Problem
 
@@ -19,6 +21,7 @@ not only be used at Baylor Centers, but also in partner medical clinics in Afric
 staff is limited. The automated identification system will provide early diagnosis of pediatric
 patients, so the treatment can start as soon as possible. Moreover it will decrease the human errors
 in pneumonia diagnosis.
+
 
 ## Outline
 
